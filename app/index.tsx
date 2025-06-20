@@ -55,8 +55,7 @@ export default function HomeScreen() {
     <ThemedView style={styles.container}>
       {/* Fixed header that stays in place */}
       <View style={styles.fixedHeader}>
-        <ThemedText style={styles.headerText}>Manchester Pub Crawl</ThemedText>
-        <ThemedText style={styles.subHeaderText}>Scroll to explore</ThemedText>
+        <ThemedText style={styles.headerText}>Slaker's Dozen</ThemedText>
       </View>
       
       {/* Main content that scrolls */}
@@ -199,7 +198,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#000',
   },
   fixedHeader: {
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
     left: 0,
     right: 0,

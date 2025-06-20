@@ -388,7 +388,7 @@ const styles = StyleSheet.create({
     overflow: 'hidden', // Prevent scrolling outside the container
   },
   fixedHeader: {
-    position: 'absolute',
+    position: 'fixed',
     top: 0,
     left: 0,
     right: 0,
