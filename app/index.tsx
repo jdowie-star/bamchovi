@@ -53,19 +53,16 @@ export default function HomeScreen() {
   
   return (
     <ThemedView style={styles.container}>
-      {/* Fixed header that stays in place */}
-      <View style={styles.fixedHeader}>
-        <ThemedText style={styles.headerText}>Slaker's Dozen</ThemedText>
-      </View>
-      
       {/* Main content that scrolls */}
       <Animated.ScrollView
         scrollEventThrottle={16}
         onScroll={scrollHandler}
         contentContainerStyle={styles.scrollContent}>
         
-        {/* Spacer to push content below fixed header */}
-        <View style={{ height: 150 }} />
+        {/* Title */}
+        <View style={styles.titleContainer}>
+          <ThemedText style={styles.headerText}>Slaker's Dozen</ThemedText>
+        </View>
         
         <ThemedView style={styles.introContainer}>
           <ThemedText style={styles.introText}>
@@ -197,16 +194,11 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#000',
   },
-  fixedHeader: {
-    position: 'fixed',
-    top: 0,
-    left: 0,
-    right: 0,
+  titleContainer: {
     height: 150,
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 10,
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    marginBottom: 20,
   },
   headerText: {
     fontSize: 40,
